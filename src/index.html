@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+
+    <div id="countdown">
+      <img src="http://projects.sfchronicle.com/2016/voter-guide/assets/photos/banner.png">
+      <h2>California Polls close in:</h2>
+      <div id="countdown-header"></div>
+      <footer>
+        <div class="footer-logo"><img src="http://projects.sfchronicle.com/shared/logos/sfcg_logo_color.png"></div>
+        <div class="link">Live Results: <a href="http://sfchronicle.com/election2016">www.sfchronicle.com/election2016</a></div>
+      </footer>
+        
+    </div>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>

@@ -1,0 +1,87 @@
+#countdown {
+	max-width:600px;
+	width: 100%;
+	text-align: center;
+	font-family:'AntennaRegular';
+	margin:1em auto;
+
+	img{
+	width:100%;
+	}
+
+	h2{
+	font-size:1em;
+	margin:0;
+	@media @mobile{
+	font-size:0.8em;
+	}
+	}
+}
+
+#countdown-header{
+    padding: 0px 15px 0 10%;
+
+    &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+	}
+  
+}
+
+.days, .hours, .minutes, .seconds{
+    float:left;
+    font-size:3em;
+    color:red;
+
+    @media @mobile{
+    	font-size:2em;
+	}
+}
+
+.text{
+    font-size:0.7em;
+    color:#333;
+    clear:left;
+    text-align:left;
+
+    @media @mobile{
+    	font-size:0.5em;
+    }
+}
+
+.time{
+    float: left;
+    width: calc(25%);
+}
+
+footer{
+	background-color:#ececec;
+	padding:10px 0 0 0;
+	margin-top:2em;
+
+	.footer-logo{
+		max-width:200px;
+	    display: inline-block;
+    	float: left;
+
+    	@media @mobile{
+    		float:none;
+    	}
+	}
+
+	.link{
+	padding: 7px 10px 0 0;
+    font-size: 15px;
+    float: right;
+    font-family: "AntennaExtraLight";
+
+    @media @mobile{
+        float: none;
+   		padding: 0 0 10px 0;
+    }
+	}
+}
