@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../sfgate.css">
+  </head>
+
+  <body style="background-color: grey;">
+
+    <div id="countdown">
+      <div id="container">
+        <div class="brand">
+          <img src="http://projects.sfchronicle.com/2016/voter-guide/assets/photos/banner.png">
+        </div>
+
+        <h2>California polls close in:</h2>
+        
+        <div id="countdown-header"></div>
+      </div>
+        
+    </div>
+
+    <script type="text/javascript">
+      setInterval(function () {
+
+        var today = new Date(), //gets the browser's current time
+          electionDay = new Date("Nov 8 2016 00:00:00 (PST)"), //sets the countdown
+          msPerDay = 24 * 60 * 60 * 1000,
+          timeLeft = (electionDay.getTime() - today.getTime()),
+          daysLeft = Math.floor(timeLeft / msPerDay),
+          hrsLeft = Math.floor((timeLeft / (1000 * 60 * 60)) % 24),
+          minsLeft = Math.floor((timeLeft / 1000 / 60) % 60),
+          secsLeft = Math.floor((timeLeft / 1000) % 60);
+      
+        document.getElementById("countdown-header").innerHTML = (
+          "<div class='time'><div class='days'>"    +  daysLeft  + "</div><div class='text'>DAYS</span></div></div>"  + 
+          "<div class='time'><div class='hours'>"   +  hrsLeft   + "</div><div class='text'>HOURS</span></div></div>" + 
+          "<div class='time'><div class='minutes'>" +  minsLeft  + "</div><div class='text'>MINUTES</span></div></div>" +
+          "<div class='time'><div class='seconds'>" +  secsLeft  + "</div><div class='text'>SECONDS</span></div></div>"
+        );
+
+      }, 1000);
+    </script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>

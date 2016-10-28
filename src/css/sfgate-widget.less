@@ -1,0 +1,149 @@
+#countdown {
+	font-family:'AntennaRegular';
+    max-width: 1255px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+	
+	img{
+	 height:40px;
+	}
+
+	h2{
+	 font-size:0.9em;
+	 float:left;
+	 margin:6px 0 0 0;
+	 font-family: @med-graphics;
+	 display: inline-block;
+     text-transform:uppercase;
+     letter-spacing:1px;
+	
+		@media (max-width:810px){
+		 font-size: 0.5em;
+		 margin-top: 12px;
+		}
+
+		@media (max-width:610px){
+		float: none;
+	    margin-top: 0;
+	    padding-top: 7px;
+	    margin-bottom: 0px;
+	    display: block;
+	    text-align: center;
+		}
+	}
+}
+
+#container{
+    max-width: 1071px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    height: 40px;
+
+    @media (max-width:1042px){
+    	max-width:810px;
+    }
+
+    @media (max-width:810px){
+	 max-width:610px;
+	}
+
+	@media (max-width:610px){
+	 max-width:475px;
+	 height: 49px;
+	}
+}
+
+.brand{
+	height:100%;
+    display: inline-block;
+    float: left;
+    padding: 0 5px;
+
+    img{
+    padding:6px 30px 6px 4px;
+    }
+
+    @media (max-width:1042px){
+    	display:none
+    }
+}
+
+#countdown-header{
+	display:inline-block;
+    padding: 0 15px;
+    float:left;
+
+    &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+	}
+
+	@media (max-width: 610px){
+	float: none;
+    display: block;
+    padding: 0 10px;
+    max-width: 325px;
+    margin: 0 auto;
+    width: 100%;
+	}
+  
+}
+
+.days, .hours, .minutes, .seconds{
+    margin-top: -3px;
+    margin-right:4px;
+    float:left;
+    font-size:1.3em;
+    color:red;
+
+    @media (max-width:610px){
+    margin-top: 0;
+    margin-right: 0;
+    float: left;
+    font-size: 0.8em;
+	}
+
+}
+
+.text{
+    font-size:0.7em;
+    color:#333;
+    float:left;
+    text-align:left;
+    margin-top: 12px;
+    margin-right: 20px;
+
+    @media (max-width:810px){
+	 font-size: 0.5em;
+	 margin-top: 12px;
+	}
+
+	@media (max-width:610px){
+     margin-top: 8px;
+    padding-left: 3px;
+    margin-right:0;
+
+	}
+	
+}
+
+.time{
+    float: left;
+
+    @media(max-width:610px){
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 3px;
+    }
+
+    &:nth-child(4){
+        margin-right: 0;
+    }
+}
+
