@@ -11,13 +11,8 @@
   <body is="responsive-body">
 
     <div id="countdown">
-      <div id="container">
-        <a href="http://projects.sfchronicle.com/2016/voter-guide/" target="_blank">
-          <div class="brand">
-            <img src="http://projects.sfchronicle.com/2016/voter-guide/assets/photos/banner.png">
-          </div>
-        </a>
-
+      <div id="container" class="hearst">
+    
         <h2>California polls close in:</h2>
         
         <div id="countdown-header"></div>
@@ -28,10 +23,10 @@
     <script type="text/javascript">
       setInterval(function () {
 
-        //gets the browser's current time
-        var today = new Date(),
+        var today = new Date(),//gets the browser's current time
+
           // electionDay sets countdown at 5pm PST & accounts for hour change on Nov 6
-          electionDay = new Date("Nov 8 2016 00:17:00 GMT-0800"),
+          electionDay = new Date("Nov 8 2016 00:17:00 GMT-0800"), 
           msPerDay = 24 * 60 * 60 * 1000,
           timeLeft = (electionDay.getTime() - today.getTime()),
           daysLeft = Math.floor(timeLeft / msPerDay),

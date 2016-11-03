@@ -1,7 +1,7 @@
 setInterval(function () {
 
     var today = new Date(), //gets the browser's current time
-    	electionDay = new Date("Nov 8 2016 00:00:00 (PST)"), //sets the countdown
+    	electionDay = new Date("Nov 8 2016 00:17:00"), //sets the countdown at 5pm
     	msPerDay = 24 * 60 * 60 * 1000,
     	timeLeft = (electionDay.getTime() - today.getTime()),
     	daysLeft = Math.floor(timeLeft / msPerDay),
